@@ -1,12 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc.RazorPages;
-using Nume_Pren_Lab2.Data;
+using Stoica_Adelina_Lab2.Data;
+using Stoica_Adelina_Lab2.Data;
 
 namespace Stoica_Adelina_Lab2.Models
 {
     public class BookCategoriesPageModel : PageModel
     {
         public List<AssignedCategoryData> AssignedCategoryDataList;
-        public void PopulateAssignedCategoryData(Nume_Pren_Lab2Context context,
+        public void PopulateAssignedCategoryData(Stoica_Adelina_Lab2Context context,
         Book book)
         {
             var allCategories = context.Category;
@@ -23,7 +24,7 @@ namespace Stoica_Adelina_Lab2.Models
                 });
             }
         }
-        public void UpdateBookCategories(Nume_Pren_Lab2Context context,
+        public void UpdateBookCategories(Stoica_Adelina_Lab2Context context,
         string[] selectedCategories, Book bookToUpdate)
         {
             if (selectedCategories == null)

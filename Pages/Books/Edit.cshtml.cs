@@ -35,7 +35,7 @@ namespace Stoica_Adelina_Lab2.Pages.Books
  .AsNoTracking()
  .FirstOrDefaultAsync(m => m.ID == id);
 
-            if (book == null)
+            if (Book == null)
             {
                 return NotFound();
             }

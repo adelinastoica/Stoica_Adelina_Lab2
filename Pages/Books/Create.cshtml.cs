@@ -14,6 +14,7 @@ namespace Stoica_Adelina_Lab2.Pages.Books
 
     {
         private readonly Stoica_Adelina_Lab2.Data.Stoica_Adelina_Lab2Context _context;
+        private object newBook;
 
         public CreateModel(Stoica_Adelina_Lab2.Data.Stoica_Adelina_Lab2Context context)
         {
@@ -45,7 +46,7 @@ namespace Stoica_Adelina_Lab2.Pages.Books
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync(string[] selectedCategories)
         {
-            //var newBook = new Book();
+            var newBook = new Book();
             if (selectedCategories != null)
             {
                 newBook.BookCategories = new List<BookCategory>();
